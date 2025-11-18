@@ -12,8 +12,24 @@
             compras.Add("Leite");       // Posição 2 (item 3)
             compras.Add("Ovos");        // Posição 3 (item 4)
 
+            //var sair = false;
+            //while (!sair) //O usuário não digitou SAIR
+            //{
+            //    Console.WriteLine("Digite o Nome do Produto ou 'sair' para encerrar:");
+            //    var entrada = Console.ReadLine();
+
+            //    if (entrada == "sair")
+            //    {
+            //        sair = true;
+            //    }
+            //    else
+            //    {
+            //        compras.Add(entrada);
+            //    }
+            //}
+
             var sair = false;
-            while (!sair) //O usuário não digitou SAIR
+            do
             {
                 Console.WriteLine("Digite o Nome do Produto ou 'sair' para encerrar:");
                 var entrada = Console.ReadLine();
@@ -27,7 +43,7 @@
                     compras.Add(entrada);
                 }
             }
-
+            while (!sair);
 
 
 
