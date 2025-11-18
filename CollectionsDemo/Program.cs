@@ -31,16 +31,24 @@
 
             // Colocar isso em um laço de repetição
             // ###################################
-            Console.Write("Deseja adicionar um item na lista de compras? (s/n): ");
-            string resposta = Console.ReadLine();
 
-            if (resposta == "s" || resposta == "S")
+            string resposta = "";
+            do
             {
-                Console.Write("Digite o item:");
-                string novoItem = Console.ReadLine();
-                compras.Add(novoItem);
+                Console.Write("Deseja adicionar um item na lista de compras? (s/n): ");
+                resposta = Console.ReadLine();
+
+                if (resposta == "s" || resposta == "S")
+                {
+                    Console.Write("Digite o item:");
+                    string novoItem = Console.ReadLine();
+                    compras.Add(novoItem);
+                }
+                // ###################################
+
             }
-            // ###################################
+            while (resposta == "s" || resposta == "S");
+
 
             for (int i = 0; i < compras.Count; i++)
             {
